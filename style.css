@@ -133,10 +133,98 @@ p{
 
 .showcase form{
     margin: auto;
+    display: flex;
 }
 
+.showcase input[type="email"]{
+    padding:  10px 70px 10px 0;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+
+.btn {
+    border-radius: 6px;
+    border: none;
+    padding: 12px 20px;
+    background: #9867a5;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 6px 6px 6px 6px  rgba(0, 0, 0, 0.2);
+
+}
+.btn:hover{
+    color: orange;
+    background-color: #cd87e0;
+}
+/* Change typeface and its size */
 .little-info{
 
     font-size: 15px;
     font-family: "poppins", sans-serif;
+}
+/* Centra el conetenedor, aplica un ancho máximo*/
+.lower-container{
+    margin: 120px auto;
+    padding: 0;
+    max-width: 1400px;
+}
+/*Apunta a todos los elementos h3 con clase CSS title*/
+.title{
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*Apunta a todos los parrafos ocn la clase CSS text*/
+.text{
+    color: black;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+    margin: 0, 20px;
+    text-align: justify;
+}
+/*Mostrar horizontalmente, poner un poco de espacio alrededor*/
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+/*Agregar algo de padding alrededor del contenedor. Alinear el texto al centro*/
+.stats{
+    padding: 45px 50px;
+    text-align: center;
+}
+/*Agrego el color de los iconos-fuente de Font Awesome*/
+.stats .fa{
+    color: purple;
+}
+/*Aplico a la caja testimonials el color del texto para que sea visible*/
+.testimonials{
+    color: black;
+    padding: 40px;
+}
+/*Dara altura a la imagen para ocupar todo el alto del contenedor*/
+/*Envuelve la imagen dentro de una figra circular y define su altura para que tome todo el
+alto del su elemento padre*/
+.testimonial img{
+    height: 100%;
+    clip-path: circle();
+}
+/*Alinea el texto al centro*/
+.testimonial h3{
+    text-align: center;
+}
+
+/*Crear un grid de tres columnas equidistantes. Definir
+un espacioado de 40px entre ellos*/
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
