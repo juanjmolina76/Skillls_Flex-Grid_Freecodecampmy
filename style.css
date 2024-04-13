@@ -186,7 +186,7 @@ p{
     font-size: 19px;
     width: 100%;
     padding: 10px;
-    margin: 0, 20px;
+    margin: 0 20px;
     text-align: justify;
 }
 /*Mostrar horizontalmente, poner un poco de espacio alrededor*/
@@ -227,4 +227,39 @@ un espacioado de 40px entre ellos*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+}
+.card{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  -7px -7px 20px rgba(0, 0, 0, 0.2),
+                 -7px -7px 20px rgba(0, 0, 0, 0.2);
+}
+.circle{
+    background-color: transparent;
+    border: 3px solid purple;
+    height: 90px;
+    position: relative;
+    top: -30px;
+    left: 120px;
+    border-radius: 50% ;
+    /*-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;*/
+    width: 90px;
+}
+
+footer{
+    background-color: purple;
+    padding: 20px 10px;
+    /*max-width: 1200px;*/
+}
+
+footer a{
+    color: white;
+    margin: 0 10px;
+}
+
+footer a:hover{
+    color: #cd87e0;
+    border-bottom: 10px solid #cd87e0;
 }
