@@ -62,10 +62,6 @@ p{
     overflow: visible;
 }
 
-.flex{
-
-
-}
 /*SELECTORES POR ESPECIFICIDAD*/
 .navbar{
     background-color: purple;
@@ -382,7 +378,7 @@ las esquinas y establece un padding superior e inferior*/
     /*Reducir el ancho de la imagen*/
 
     .img{
-        whidt: 350px;
+        width: 350px;
         margin-left: 70px;
 
     }
