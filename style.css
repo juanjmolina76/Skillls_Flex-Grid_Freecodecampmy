@@ -58,6 +58,7 @@ p{
 .container{
     margin: 0 auto;
     max-width: 1200px;
+    min-width: 600px;
     overflow: visible;
 }
 
@@ -98,7 +99,7 @@ p{
 
 .navbar a:hover{
     color: #9867a5;
-    border-bottom: 10px solid #9867a5;
+    border-bottom: 3px solid #9867a5;
 }
 
 .showcase{
@@ -207,6 +208,7 @@ p{
 .testimonials{
     color: black;
     padding: 40px;
+   
 }
 /*Dara altura a la imagen para ocupar todo el alto del contenedor*/
 /*Envuelve la imagen dentro de una figra circular y define su altura para que tome todo el
@@ -214,6 +216,11 @@ alto del su elemento padre*/
 .testimonial img{
     height: 100%;
     clip-path: circle();
+    
+    
+}
+.testimonial img:hover{
+    filter:saturate(130%)
 }
 /*Alinea el texto al centro*/
 .testimonial h3{
@@ -221,12 +228,13 @@ alto del su elemento padre*/
 }
 
 /*Crear un grid de tres columnas equidistantes. Definir
-un espacioado de 40px entre ellos*/
+un espaciado de 40px entre ellos*/
 
 .grid-3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+ 
 }
 .card{
     padding: 10px;
@@ -246,6 +254,14 @@ un espacioado de 40px entre ellos*/
     /*-moz-border-radius: 50%;
     -webkit-border-radius: 50%;*/
     width: 90px;
+    
+    
+}
+
+.filter{
+    /*padding: 20px;*/
+    background-color: rgba(187, 57, 18, 0.3);
+   
 }
 
 footer{
@@ -262,4 +278,130 @@ footer a{
 footer a:hover{
     color: #cd87e0;
     border-bottom: 10px solid #cd87e0;
+}
+
+/*RESPONSIVE*/
+/*DEFINICION DE MEDIA QUERIES*/
+
+/*PARA ESTABLECER BREAK POINTS*/
+
+/*Definicion de reglas: */
+
+/*TABLETS Y PANTALLAS MAS PEQUEÑAS*/
+
+@media(max-width: 768px){
+  
+
+    .grid, .grid-3{
+        grid-template-columns: 1fr;
+    }
+    /*Alinea todo el texto al centro. Esto moverá tod el texto, incluyendo
+    el formulario*/
+    .showcase{
+        height: auto;
+        text-align: center;
+    }
+
+    /*Esto restablece el ancho del contenedro de la imagen y agrega margen 
+    a la izquierda*/
+
+    .image{
+        width: 600px;
+        margin-left: 80px;
+    }
+
+
+    /*Cambia las secciones de servicio de lado-a-lado para que se posicione
+    en una sola linea. Centra el texto*/
+
+    .stats .flex{
+        flex-direction: column;
+    }
+
+    .stats{
+        text-align: center;
+    }
+/*Asegura que cada seccion en las estadisticas (stat) no exeda el ancho 
+del elemento padre.*/
+
+    .stat{
+        width: 100%;
+        padding-right: 80px;
+    }
+    
+    /*Mueve el círculo al centro de la card*/
+
+    .circle{
+        background-color: transparent;
+        border: 3px solid purple;
+        height: 90px;
+        position: relative;
+        top: -30px;
+        left: 270px;
+        border-radius: 50% ;
+        /*-moz-border-radius: 50%;
+        -webkit-border-radius: 50%;*/
+        width: 90px;
+    }
+
+}
+/*Esto hace que el formulario y la imagen (con grid)que se mostraban
+lado-a-lado, se van a mostrar 
+uno luego del otro*/
+
+@media (max-width: 500px){
+    /*Cambia la alineacion. El logo Skilllz del titulo se queda en la
+    parte superior, los enlaces de navegación ahora se muestran debajo*/
+    
+    .navbar .flex{
+        flex-direction: column;
+    }
+/*Al hover sobre los enlaces a, se tiñe en blanco el texto y se subraya en negro*/
+    .navbar a:hover{
+        color: white;
+        border-bottom: 2px solid black;
+/*Establece el color purpura para le fondo común de los enlaces de navegación, redondea
+las esquinas y establece un padding superior e inferior*/
+    }
+    .navbar ul{
+        background-color: #cd87e0;
+        border-radius: 15px;
+        padding: 10px 0;
+    }
+/*Alinear el texto al centro*/
+
+    .showcase{
+        text-align: center;
+        height: auto;
+    }
+/*Reducir el tamaño de fuente de little-info*/
+    .little-info{
+        font-size: 13px;
+    }
+
+    /*Reducir el ancho de la imagen*/
+
+    .img{
+        whidt: 350px;
+        margin-left: 70px;
+
+    }
+    .stat{
+        margin-bottom:  40px;
+    }
+
+    /*mover el circulo una vez más*/
+
+    .circle{
+        background-color: transparent;
+    border: 3px solid purple;
+    height: 90px;
+    position: relative;
+    top: -30px;
+    left: 150px;
+    border-radius: 50% ;
+    /*-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;*/
+    width: 90px;
+    }
 }
